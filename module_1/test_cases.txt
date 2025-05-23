@@ -1,0 +1,29 @@
+Sample Test Cases
+
+1.
+    Input : Naga, abc@xyz.com, 19
+    Expected Output : Data has been registered 
+                        User Name: Naga
+                        Email: abc@xyz.com
+                        Age: 19
+                        Category: Adult 
+
+
+2.
+    Input : 123, abc@xyz.com, 19
+    Expected Output : Invalid name. Only alphabets are allowed.
+
+
+3.
+    Input : Srinivas, abc.com, 19
+    Expected Output : Invalid email format.
+
+
+4.
+    Input : Naga, abc@xyz.com, ab
+    Expected Output : Invalid age. Only positive numbers are allowed.
+
+
+5.
+    Input :  , , 
+    Expected Output : Invalid name. Only alphabets are allowed.
