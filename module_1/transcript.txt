@@ -1,0 +1,123 @@
+The goal of this assignment is to provide students with foundational Python programming skills, enabling them to write clean, error-free code and build a strong base for integrating advanced features in the LLM-powered applications. Scenario: You are tasked with creating a basic utility for the Visa Mock Interview System (VMIS) that processes user data, validates inputs, and prepares it for further processing in a Flask-based application.
+
+E
+To create a basic utility for the Visa Mock Interview System (VMIS) that processes user data, validates inputs, and prepares it for further processing in a Flask-based application, follow these step-by-step instructions:
+
+Step-by-Step Instructions:
+1. Accept User Inputs:
+Prompt the user to enter their name.
+Prompt the user to enter their email address.
+Prompt the user to enter their age.
+2. Validate Inputs:
+Name Validation:
+Ensure the name contains only alphabetic characters.
+If the name is invalid, display an appropriate error message.
+Email Validation:
+Check that the email address follows the standard email format (e.g., contains '@' and a domain).
+If the email is invalid, display an appropriate error message.
+Age Validation:
+Ensure that the age is a positive integer.
+If the age is invalid (non-numeric or negative), display an appropriate error message.
+3. Print Validation Results:
+Print a success message if all inputs are valid.
+Print appropriate error messages if any input is invalid.
+4. Classify Users Based on Age:
+Check the user's age and classify them into one of the following categories:
+Underage: Below 18 years
+Adult: Between 18 and 60 years
+Senior: Above 60 years
+Print the user's category.
+5. File Handling:
+Saving User Data to File:
+Open or create a file named user_data.txt.
+Append the validated user data in the following format: Name: [name], Email: [email], Age: [age], Category: [category].
+Ensure each new entry is appended without overwriting existing data.
+6. Error Handling:
+Invalid Input Handling:
+Implement error handling for non-numeric values in age input.
+File Operations Handling:
+Implement error handling for file operations (e.g., file not found, permission issues).
+7. Debugging with Logging:
+Logging Setup:
+Use Python’s logging module to track events and errors.
+Logging User Validation Errors:
+Log validation errors with appropriate messages.
+Logging Successful Data Entries:
+Log successful data entries with details.
+Save logs to app_logs.txt.
+8. Advanced Task (Optional):
+Create a Menu-Driven Program:
+Add a main menu with options:
+Add New Entry: Allow users to input new data.
+View All Entries: Display all saved entries from user_data.txt.
+Exit: Gracefully exit the program.
+9. Test Cases:
+Prepare a file named test_cases.txt with at least 5 sample inputs and their expected outputs.
+Test cases should cover valid and invalid scenarios for name, email, and age.
+10. Documentation:
+Create README.md with clear instructions on:
+How to run the script.
+Explanation of the script functionality.
+Details about the output files (user_data.txt and app_logs.txt).
+Provide setup information if any environment preparation is needed.
+11. Submission:
+Collect the Python script, user_data.txt, app_logs.txt, test_cases.txt, and README.md into a ZIP archive.
+Optionally, host the project on GitHub and provide the repository link for submission.
+Optimization Considerations:
+Ensure all validations are efficiently handled to minimize performance overhead.
+Use efficient file handling techniques to avoid unnecessary file operations.
+Implement robust error handling to manage edge cases and prevent script crashes.
+Utilize logging effectively to provide clear insights into script operations and issues.
+Following these steps will guide you in creating a well-structured, clean, and error-free utility for VMIS, forming a solid foundation for further development and integration into a Flask-based application.
+
+Advanced Task (Optional) Create a menu-driven program that allows users to: Add new entries. View all saved entries. Exit the program gracefully.
+
+E
+To create a menu-driven program that allows users to add new entries, view all saved entries, and exit the program gracefully, follow these step-by-step instructions:
+
+Step-by-Step Instructions:
+1. Menu Setup:
+Display a main menu with the following options:
+1. Add New Entry
+2. View All Saved Entries
+3. Exit
+2. Menu Functionality:
+Implement a loop that displays the menu and processes user choices until the user chooses to exit.
+3. Add New Entry:
+User Prompt:
+Prompt the user to enter their name, email, and age.
+Validation:
+Validate all inputs as previously described:
+Name: Validate it contains only alphabetic characters.
+Email: Check for valid email format.
+Age: Ensure it's a positive integer.
+Display error messages for any invalid inputs and prompt the user to re-enter data until all are valid.
+Classification:
+Classify the user based on age into one of the categories: Underage, Adult, Senior.
+Save to File:
+Append the validated user data to user_data.txt.
+Logging:
+Log the successful addition of user data or any validation errors encountered.
+4. View All Saved Entries:
+File Reading:
+Open user_data.txt in read mode.
+Display Data:
+Read and print the content of the file to display all saved user entries.
+Error Handling:
+Implement error handling for file operations (e.g., file not found, unable to read the file).
+5. Exit the Program:
+Graceful Exit:
+Provide an option for the user to exit the program.
+Ensure any open resources (like file handles) are properly closed before exiting.
+6. Implementing the Menu-Driven Program:
+Main Loop:
+Keep the program running in a loop allowing the user to choose a menu option until 'Exit' is selected.
+User Input Handling:
+Handle menu selections with proper input validation to ensure valid menu option is chosen.
+Optimization Considerations:
+Ensure efficient file handling to minimize I/O operations and handle large file sizes gracefully.
+Validate user inputs promptly to avoid unnecessary re-prompts and possible infinite loops.
+Implement robust error handling to manage unexpected inputs and file access issues.
+Utilize efficient loops and control structures to maintain optimal program performance, even under multiple iterations and varying data sizes.
+Conclusion:
+By implementing these steps, you will create a robust and user-friendly menu-driven program that allows users to add new entries, view all saved entries, and exit gracefully. This program will form a solid base for integrating advanced features and handling real-world scenarios efficiently.

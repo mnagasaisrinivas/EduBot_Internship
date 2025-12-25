@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="feedback-container">
+<h2>Delete User</h2>
+<form action="{{ url_for('main.delete_user') }}" method="POST" onsubmit="return validateForm()">
+    <label>Email:</label>
+    <input type="email" name="email" required>
+    <button type="submit" onclick="return confirm('Are you sure?');">Submit</button>
+</form>
+</div>
+{% endblock %}

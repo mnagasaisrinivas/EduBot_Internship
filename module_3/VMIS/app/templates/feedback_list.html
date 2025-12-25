@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Submitted Feedback</h2>
+<table>
+    <tr><th>Name</th><th>Email</th><th>Message</th></tr>
+    {% for entry in feedback %}
+        <tr>
+            <td>{{ entry[0] }}</td>
+            <td>{{ entry[1] }}</td>
+            <td>{{ entry[2] }}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

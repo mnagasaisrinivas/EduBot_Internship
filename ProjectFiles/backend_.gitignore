@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment variable files
+.env
+.env.*
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Pyright
+pyrightconfig.json
+
+# Pylint
+pylint-report.txt
+pylint-output.log
+
+# Test reports
+junit.xml
+
+# VSCode and IDE settings
+.vscode/
+.idea/
+
+# Logs and local files
+*.log
+*.pot
+*.mo
+*.swp
+*.swo
+
+# Dist
+build/
+dist/
+*.egg-info/
+.eggs/

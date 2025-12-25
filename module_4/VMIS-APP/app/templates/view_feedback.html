@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Feedback</h2>
+<table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for feedback in feedbacks %}
+      <tr>
+        <td>{{ feedback.id }}</td>
+        <td>{{ name }}</td>
+        <td>{{ feedback.feedback }}</td>
+        <td>
+          <a href="{{ url_for('main.update_feedback', feedback_id=feedback.id) }}">Edit</a> |
+          <a href="{{ url_for('main.delete_feedback', feedback_id=feedback.id) }}" onclick="return confirm('Are you sure?');">Delete</a> |
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+  {% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block head %}
+<style>
+    .button-matrix {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .matrix-button {
+        width: 300px;
+        height: 150px;
+        border: #000000 solid 1px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .dark-mode .button-matrix {
+        background-color: #282828;
+        color: #ffffff;
+    }
+
+    .dark-mode .matrix-button {
+        color: #ffffff;
+        border-color: #ffffff;
+        background-color: #656565;
+    }
+
+</style>
+{% endblock %}
+{% block content %}
+<h1>Welcome to VMIS</h1>
+<p>This is a mock interview system for visa applicants. Submit your feedback to help us improve!</p>
+<div class="button-matrix">
+    <a href="{{ url_for('main.create_user') }}" class="matrix-button">Create User</a>
+    <a href="{{ url_for('main.delete_user') }}" class="matrix-button">Delete User</a>
+    <a href="{{ url_for('main.feedback') }}" class="matrix-button">Feedback</a>
+    <a href="{{ url_for('main.view_feedback') }}" class="matrix-button">View Feedback</a>
+</div>
+{% endblock %}
